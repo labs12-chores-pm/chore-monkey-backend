@@ -3,10 +3,10 @@ var localPg = require("pg");
 
 localPg = {
   host: "localhost",
-  database: process.env.database,
-  user: process.env.user,
-  password: process.env.password,
-  port: process.env.port,
+  database: 'api',
+  user: 'ryan',
+  password: 'pass',
+  port: 5432,
   defaults: {
     ssl: true
   }
