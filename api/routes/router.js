@@ -9,6 +9,7 @@ const groupMemberRoutes = require("./groupMemberRoutes");
 const listRoutes = require("./listRoutes");
 const notificationRoutes = require("./notificationRoutes");
 const inviteRoutes = require("./invitationRoutes");
+const commentRoutes = require("./commentRoutes");
 
 // const validate = require("../auth/checkJwt");
 
@@ -26,5 +27,6 @@ router.use("/groupmembers", groupMemberRoutes);
 router.use("/list", listRoutes);
 router.use("/notification", notificationRoutes);
 router.use("/invite", inviteRoutes);
+router.use("/comment", commentRoutes);
 
 module.exports = router;

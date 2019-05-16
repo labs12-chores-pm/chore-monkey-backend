@@ -2,12 +2,12 @@ const db = require('../data/config.js')
 
 module.exports = {
     get,
-    // getByGroup,
-    // getByUser,
-    // getById,
     add,
     update,
     remove
+    // getByGroup,
+    // getByUser,
+    // getById,
   }
 // this should get all the comments (findAll)
   function get() {

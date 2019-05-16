@@ -5,4 +5,4 @@ const dbEngine = process.env.DB || "development";
 const config = require("../knexfile.js")[dbEngine];
 
 // Export the configuration
-module.exports = require("knex")(config);
+module.exports = require("knex")(config); 
