@@ -12,8 +12,8 @@ exports.up = function(knex, Promise) {
     table
       .integer("subscriptionType")
       .references("id")
-      .inTable("subscriptions");
-    // .defaultTo(1);
+      .inTable("subscriptions")
+    .defaultTo(1);
     table.timestamp("createdAt").defaultTo(knex.fn.now());
     table.timestamp("updatedAt").defaultTo(knex.fn.now());
   });
