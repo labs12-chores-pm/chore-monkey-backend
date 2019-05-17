@@ -4,19 +4,26 @@ module.exports = {
     get,
     add,
     update,
-    remove
+    remove,
     // getByGroup,
     // getByUser,
-    // getById,
+    getById,
   }
 // this should get all the comments (findAll)
   function get() {
     return db('comments')
   }
+// this should get a single note
+  function getById(id) {
+    return db
+      .select("*")
+      .from("comments")
+      .where({ id });
+  }
 //   this is the post function (create)
   function add(comment) {
     return db('comments')
-      .returning('id')
+      // .returning('id')
       .insert(comment)
       .into('comments')
   }
