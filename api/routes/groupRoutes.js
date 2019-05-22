@@ -23,11 +23,11 @@ router.get("/", (req, res) => {
     .catch(err => res.status(500).json(err.message));
 });
 
-// GET groupS BY ID //
+// GET groupS By UserID //
 
 router.get("/:id", (req, res) => {
   const { id } = req.params;
-  db.getById(id)
+  db.getByUser(id)
     .then(group => {
       if (group.length >= 1) {
         return res.status(200).json({ data: group });
